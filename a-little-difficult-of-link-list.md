@@ -99,4 +99,4 @@ void Merge_L(LinkList &L,LinkList &Lb,LinkList &Lc){
 	delete Lb; 
 }
 ```
-
+一定要记得相等的情况，pc指向pa是，删除和pa相同的pb，并让pb也指向下一个
