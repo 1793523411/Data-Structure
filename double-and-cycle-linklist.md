@@ -96,3 +96,7 @@ Status ListDelte_Dul(DuLinkList &L,int i)
 
 创建一个有序单链表·的时间复杂度为o\(n^2\)
 
+单链表存储密度小于1
+
+
+
