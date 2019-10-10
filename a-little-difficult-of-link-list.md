@@ -196,6 +196,27 @@ void Resolve_L(LinkList &L,LinkList &B,LinkList &C){
 	}
 }
 ```
+## 最后再写一个：顺序有序表的合并
+**写完这个就去吃饭**
 
+```
+void MergeList_L(SqList LA,SqList LB,SqList &LC){
+	LC.length=LA.length+LB.length;//求新表的长度
+	LC.elem=new ElemType[LC.length];//分配一个新的数组
+	pc=LC.elem;
+	pa=LA.elem; pb=LB.elem;
+	pa_last=LA.elem+LA,length-1;//指向最后一个元素
+	pa_last=LB.elem+LB,length-1;
+	while((pa<=pa_last)&&pb<=pb_last){//LA,LB均未达到末尾
+	if(*pa<=*pb) *pc++ = *pa++;
+	else *pc++ = *pb++;
+    	}
+		//下面两个只会执行一个
+        while(pa<=pa_last) *pc++ = *pa++;
+	while(pb<=pb_last) *pc++ = *pb++;
+}
+```
+
+最后的这段代码只是为了比较一下顺序表和链表的合并，跟主函数没关系。❥(^_-)
 
 
