@@ -2,8 +2,8 @@
 
 _接着上一篇：链表的基本操作（这两篇应该是同一篇的）_
 ```
-LNode *L,*p,*Lb,*Lc;
-case 9:
+LNode *L,*p,*Lb,*Lc，*B,*C;
+		case 9:
 			NI_L(L); 
 			cout<<"链表的逆值";
 			p=L->next;
@@ -43,6 +43,27 @@ case 9:
 			insert_L(L,i);
 			cout<<"插入后的链表为\n";
 			p=L->next;
+			while(p)
+			{
+				cout<<p->data<<" ";
+				p=p->next;
+			}
+			cout<<"\n"<<endl;
+			break;
+			case 12:
+			InitList_L(B);
+			InitList_L(C);
+			Resolve_L(L,B,C);
+			cout<<"大于零的链表为\n" ;
+			 p=B->next;
+			while(p)
+			{
+				cout<<p->data<<" ";
+				p=p->next;
+			}
+			cout<<"\n"<<endl;
+			cout<<"小于零的链表为\n" ; 
+			 p=C->next;
 			while(p)
 			{
 				cout<<p->data<<" ";
@@ -147,5 +168,34 @@ Status insert_L(LinkList &L,int i){
 	return OK;
 } 
 ```
+
+## 将链表分解
+将链表分解为两个具有相同结构的链表，A和B,其中，A链表中存放大于0的数，B中存放小于0的数	（差不多题目叙述就是这个意思，今天懒得打字，嘻嘻嘻）
+key：在创建两个链表，if判断，然后加入到表中
+
+
+```
+void Resolve_L(LinkList &L,LinkList &B,LinkList &C){
+	LNode *r,*p;
+//也可一个链表还用原来的头结点，另一个用新分配的（不过，在这里我似乎不知道怎么用，因为这一个程序功能好多！）
+//	B=L;
+//	B->next = NULL;
+//	C=new LNode;
+//	C->next=NULL;
+	p=L->next;
+	while(p!=NULL){
+		r=p->next;
+		if(p->data<0){
+			p->next=B->next;
+			B->next=p;
+		}else{
+			p->next=C->next;
+			C->next=p;
+		}
+		p=r;
+	}
+}
+```
+
 
 
