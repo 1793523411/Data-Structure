@@ -12,4 +12,5 @@
 * [队列](dui-lie.md)
 * [表达值求值](biao-da-zhi-qiu-zhi.md)
 * [舞伴问题](wu-ban-wen-ti.md)
+* [串的基本操作](chuan-de-ji-ben-cao-zuo.md)
 
