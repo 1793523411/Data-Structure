@@ -10,4 +10,5 @@
 * [括号匹配](kuo-hao-pi-pei.md)
 * [栈和栈链](zhan-he-zhan-lian.md)
 * [队列](dui-lie.md)
+* [表达值求值](biao-da-zhi-qiu-zhi.md)
 
