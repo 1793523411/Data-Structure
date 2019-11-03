@@ -13,4 +13,5 @@
 * [表达值求值](biao-da-zhi-qiu-zhi.md)
 * [舞伴问题](wu-ban-wen-ti.md)
 * [串的基本操作](chuan-de-ji-ben-cao-zuo.md)
+* [字符串匹配算法](zi-fu-chuan-pi-pei-suan-fa.md)
 
