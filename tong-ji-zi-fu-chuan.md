@@ -92,3 +92,42 @@ count();
 
 
 ```
+## 排正负（与本章主题无关）
+```c++
+#include<iostream>
+using namespace std;
+
+void Arrange(int A[],int n){
+	int i= 0,j=n-1,x,k=0;
+	while(i<j){
+		while(i<j&&A[i]>0) i++;
+		while(i<j&&A[j]<0) j--;
+		if(i<j){
+			x=A[i];
+			A[i]=A[j];
+			A[j]=x;
+			i++;
+			j--;
+		}
+	}
+	
+	while(k<n){
+		cout<<A[k]<<" ";
+		k++;
+	}
+} 
+int main(){
+	int a[100];
+	int i=0,x,n;
+	cout<<"输入数组的个数:" ;
+	cin>>n;
+	while(i<n){
+		cin>>x;
+		a[i++]=x;
+	}
+	Arrange(a,n);
+
+
+}
+
+```
